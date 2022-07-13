@@ -1,4 +1,4 @@
 # drawing-app
 Drawing App
 
-![](Screenshot%20307.png)
+![](Screenshot%20(307).png)
