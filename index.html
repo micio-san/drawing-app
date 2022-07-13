@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Ass</title>
+    <style></style>
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <canvas id="canvas" height="500" width="1000"> </canvas>
+    <section class="controls-container">
+      <div class="control">
+        <div class="colors">
+          <div class="container-color">
+            <div data-id="black" class="color"></div>
+          </div>
+          <div class="container-color">
+            <div data-id="grey" class="color"></div>
+          </div>
+          <div class="container-color">
+            <div data-id="white" class="color"></div>
+          </div>
+          <div class="container-color">
+            <div data-id="blueviolet" class="color"></div>
+          </div>
+          <div class="container-color">
+            <div data-id="thistle" class="color"></div>
+          </div>
+          <div class="container-color">
+            <div data-id="yellow" class="color"></div>
+          </div>
+          <div class="container-color">
+            <div data-id="salmon" class="color"></div>
+          </div>
+          <div class="container-color">
+            <div data-id="sienna" class="color"></div>
+          </div>
+          <div class="container-color">
+            <div data-id="#dc143c" class="color"></div>
+          </div>
+          <div class="container-color">
+            <div data-id="orange" class="color"></div>
+          </div>
+          <div class="container-color">
+            <div data-id="brown" class="color"></div>
+          </div>
+          <div class="container-color">
+            <div data-id="blue" class="color"></div>
+          </div>
+          <div class="container-color">
+            <div data-id="skyblue" class="color"></div>
+          </div>
+          <div class="container-color">
+            <div data-id="lightgreen" class="color"></div>
+          </div>
+          <div class="container-color">
+            <div data-id="darkgreen" class="color"></div>
+          </div>
+        </div>
+        <div class="brush">
+          <h2 id="strokeSizeDisplay">20</h2>
+          <input
+            min="1"
+            max="40"
+            type="range"
+            name="rangeSize"
+            id="strokeSize"
+          />
+        </div>
+        <button class="btn" id="reset-btn">Reset</button>
+      </div>
+    </section>
+    <!-------secondColumn --->
+    <section class="controls-container controls-container-second">
+      <div class="control-second">
+        <ul class="background-control-container">
+          <li class="background-control full-color">
+            <svg
+              stroke="currentColor"
+              fill="none"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              height="50px"
+              width="50px"
+              xmlns="http://www.w3.org/2000/svg"
+              class="background-btn-icon"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8.20348 2.00378C9.46407 2.00378 10.5067 3.10742 10.6786 4.54241L19.1622 13.0259L11.384 20.8041C10.2124 21.9757 8.31291 21.9757 7.14134 20.8041L2.8987 16.5615C1.72713 15.3899 1.72713 13.4904 2.8987 12.3188L5.70348 9.51404V4.96099C5.70348 3.32777 6.82277 2.00378 8.20348 2.00378ZM8.70348 4.96099V6.51404L7.70348 7.51404V4.96099C7.70348 4.63435 7.92734 4.36955 8.20348 4.36955C8.47963 4.36955 8.70348 4.63435 8.70348 4.96099ZM8.70348 10.8754V9.34247L4.31291 13.733C3.92239 14.1236 3.92239 14.7567 4.31291 15.1473L8.55555 19.3899C8.94608 19.7804 9.57924 19.7804 9.96977 19.3899L16.3337 13.0259L10.7035 7.39569V10.8754C10.7035 10.9184 10.7027 10.9612 10.7012 11.0038H8.69168C8.69941 10.9625 8.70348 10.9195 8.70348 10.8754Z"
+                fill="currentColor"
+              ></path>
+              <path
+                d="M16.8586 16.8749C15.687 18.0465 15.687 19.946 16.8586 21.1175C18.0302 22.2891 19.9297 22.2891 21.1013 21.1175C22.2728 19.946 22.2728 18.0465 21.1013 16.8749L18.9799 14.7536L16.8586 16.8749Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </li>
+          <li class="background-control gradient">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 16 16"
+              height="50px"
+              width="50px"
+              xmlns="http://www.w3.org/2000/svg"
+              class="background-btn-icon"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 1H2a1 1 0 00-1 1v12a1 1 0 001 1h6V1zM2 0a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V2a2 2 0 00-2-2H2z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </li>
+          <li class="background-control image">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 16 16"
+              height="50px"
+              width="50px"
+              xmlns="http://www.w3.org/2000/svg"
+              class="background-btn-icon"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M12.002 4h-10a1 1 0 00-1 1v8a1 1 0 001 1h10a1 1 0 001-1V5a1 1 0 00-1-1zm-10-1a2 2 0 00-2 2v8a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2h-10z"
+                clip-rule="evenodd"
+              ></path>
+              <path
+                d="M10.648 8.646a.5.5 0 01.577-.093l1.777 1.947V14h-12v-1l2.646-2.354a.5.5 0 01.63-.062l2.66 1.773 3.71-3.71z"
+              ></path>
+              <path
+                fill-rule="evenodd"
+                d="M4.502 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM4 2h10a1 1 0 011 1v8a1 1 0 01-1 1v1a2 2 0 002-2V3a2 2 0 00-2-2H4a2 2 0 00-2 2h1a1 1 0 011-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </li>
+        </ul>
+        <div class="option-menu photo">
+          <div class="colors-fill">
+            <div class="container-color-fill">
+              <div data-id="black" class="color-fill"></div>
+            </div>
+            <div class="container-color-fill">
+              <div data-id="grey" class="color-fill"></div>
+            </div>
+            <div class="container-color-fill">
+              <div data-id="white" class="color-fill"></div>
+            </div>
+            <div class="container-color-fill">
+              <div data-id="blueviolet" class="color-fill"></div>
+            </div>
+            <div class="container-color-fill">
+              <div data-id="thistle" class="color-fill"></div>
+            </div>
+            <div class="container-color-fill">
+              <div data-id="yellow" class="color-fill"></div>
+            </div>
+            <div class="container-color-fill">
+              <div data-id="salmon" class="color-fill"></div>
+            </div>
+            <div class="container-color-fill">
+              <div data-id="sienna" class="color-fill"></div>
+            </div>
+            <div class="container-color-fill">
+              <div data-id="#dc143c" class="color-fill"></div>
+            </div>
+            <div class="container-color-fill">
+              <div data-id="orange" class="color-fill"></div>
+            </div>
+            <div class="container-color-fill">
+              <div data-id="brown" class="color-fill"></div>
+            </div>
+            <div class="container-color-fill">
+              <div data-id="blue" class="color-fill"></div>
+            </div>
+            <div class="container-color-fill">
+              <div data-id="skyblue" class="color-fill"></div>
+            </div>
+            <div class="container-color-fill">
+              <div data-id="lightgreen" class="color-fill"></div>
+            </div>
+            <div class="container-color-fill">
+              <div data-id="darkgreen" class="color-fill"></div>
+            </div>
+          </div>
+          <div class="colors-gradient">
+            <div class="container-color-gradient">
+              <div data-id="black" class="color-gradient"></div>
+            </div>
+            <div class="container-color-gradient">
+              <div data-id="grey" class="color-gradient"></div>
+            </div>
+            <div class="container-color-gradient">
+              <div data-id="white" class="color-gradient"></div>
+            </div>
+            <div class="container-color-gradient">
+              <div data-id="blueviolet" class="color-gradient"></div>
+            </div>
+            <div class="container-color-gradient">
+              <div data-id="thistle" class="color-gradient"></div>
+            </div>
+            <div class="container-color-gradient">
+              <div data-id="yellow" class="color-gradient"></div>
+            </div>
+            <div class="container-color-gradient">
+              <div data-id="salmon" class="color-gradient"></div>
+            </div>
+            <div class="container-color-gradient">
+              <div data-id="sienna" class="color-gradient"></div>
+            </div>
+            <div class="container-color-gradient">
+              <div data-id="#dc143c" class="color-gradient"></div>
+            </div>
+            <div class="container-color-gradient">
+              <div data-id="orange" class="color-gradient"></div>
+            </div>
+            <div class="container-color-gradient">
+              <div data-id="brown" class="color-gradient"></div>
+            </div>
+            <div class="container-color-gradient">
+              <div data-id="blue" class="color-gradient"></div>
+            </div>
+            <div class="container-color-gradient">
+              <div data-id="skyblue" class="color-gradient"></div>
+            </div>
+            <div class="container-color-gradient">
+              <div data-id="lightgreen" class="color-gradient"></div>
+            </div>
+            <div class="container-color-gradient">
+              <div data-id="darkgreen" class="color-gradient"></div>
+            </div>
+            <div class="container-color-gradient">
+              <div data-id="transparent" class="color-gradient"></div>
+            </div>
+            <div class="commands-container">
+              <div class="input-container">
+                <label for="first-color">First Color</label>
+                <input
+                  name="input"
+                  class="input-radio"
+                  id="first-color"
+                  type="radio"
+                />
+                <div class="color-show first-color-show"></div>
+              </div>
+              <div class="input-container">
+                <label for="second-color">Second Color</label>
+                <input
+                  name="input"
+                  class="input-radio"
+                  id="second-color"
+                  type="radio"
+                />
+                <div class="color-show second-color-show"></div>
+              </div>
+            </div>
+          </div>
+          <div class="photo">
+            <div class="drop-zone">
+              <span class="drop-zone__prompt">Drop File Here</span>
+              <input type="file" name="myFile" id="drop-zone__input" />
+            </div>
+          </div>
+          <div class="confirm-btn"></div>
+        </div>
+        <button class="btn" id="confirm-btn">Confirm</button>
+        <button class="btn" id="save-btn">Save</button>
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>

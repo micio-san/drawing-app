@@ -1,0 +1,220 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+body{
+font-family: sans-serif;
+height: 100vh;
+width: 100%;
+background: #c8c8c8;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+}
+.cursor {
+  position: absolute;
+z-index: 10;
+  border-radius: 50%;
+  border: 1px solid black;
+  pointer-events: none;
+  height: 10px;
+  width:10px ;
+  animation: cursorAnimation 5s linear infinite ;
+}
+.controls-container {
+    position: absolute;
+    z-index: 20;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(168, 168, 168);
+    border-right:2px solid black ;
+    width: 300px;   
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+.controls-container-second{
+  left: 100%;
+  transform: translateX(-100%);
+  border-left:2px solid black ;
+}
+.control-second,
+.control{
+  padding: 10px 0px;    
+    background: #c8c8c8;
+    border-radius: 10px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+}
+.brush{
+    width: 100%;
+    text-align: center;
+    height: 80px;
+    line-height: 40px;
+}
+.colors-gradient,
+.colors-fill,
+.background-control-container,
+.colors{
+    width: 250px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.background-control-container{
+  height: 100px;
+}
+
+.colors-gradient,
+.colors-fill{
+  width: 100%;
+  justify-content:space-around;
+  height: 200px;
+}
+.colors-gradient{
+  height: 100%; 
+}
+.background-btn-icon{
+  pointer-events: none;
+}
+.container-color-gradient,
+.container-color-fill,
+.container-color {
+  width: 60px;
+  margin: 0px 5px;
+  height: 60px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border-radius: 50%;
+}
+.container-color-gradient,
+.container-color-fill{
+  width: 40px;
+  margin: 0px 3px;
+  height: 40px;
+}
+.option-menu .colors-gradient,
+.option-menu .photo,
+.option-menu .colors-fill{
+  display: none;
+  }
+
+.option-menu.photo .photo,
+.option-menu.gradient .colors-gradient,
+.option-menu.fill .colors-fill{
+display: flex;
+  }
+.active {
+  background: black;
+}
+.color-gradient,
+.color-fill,
+.color{  
+border: 2px solid black;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer; 
+}
+.color-gradient,
+.color-fill {
+  border-radius: 0%;
+  width: 40px;
+  height: 40px;
+}
+.background-control {
+  cursor: pointer;
+  position: relative;
+}
+.option-menu {
+height: 300px;
+width: 90%;
+border: 2px solid black;
+background: #ffffffaa;
+}
+li{
+  list-style: none;
+}
+.commands-container {
+  width: 100%;
+}
+.input-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: start;
+}
+label {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.color-show {
+  width: 30px;
+  height: 20px;
+  border: 1px solid black;
+ margin-left:auto ;
+}
+.drop-zone {
+  height: 100%;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  font-size: 25px;
+  padding: 10px;
+}
+#drop-zone__input {
+  display: none;
+}
+.drop-zone__thumb {
+  width: 100%;
+  height: 100%;
+  border: 2px dashed;
+ 
+  background-color: #ffffffaa;
+  position: relative;
+}
+#canvas{
+ border: 2px solid black;
+ touch-action: none;
+ cursor: none;
+ overflow: hidden;
+ background-color: white;
+}
+.btn {
+  width: 200px;
+  height: 50px;
+  border: none;
+  background:black ;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+.btn:hover{
+  background: white;
+  color: black;
+}
+@keyframes cursorAnimation {
+  0%{
+    transform: translate(-50%,-50%) rotate(0deg);
+  }
+  100%{
+    transform: translate(-50%,-50%) rotate(0deg);
+  }
+}
